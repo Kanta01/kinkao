@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinkao</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+
+<div class="container">
+    <h1 class="display-6">Add Restaurant</h1>
+
+    <form th:action="@{/restaurant/add}" method="POST">
+        <div class="mb-3">
+            <label for="nameInput" class="form-lable">Name</label>
+            <input id="nameInput" type="text" class="form-control" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="addressInput" class="form-lable">Address</label>
+            <input id="addressInput" type="text" class="form-control" name="address">
+        </div>
+        <div class="mb-3">
+            <label for="phoneInput" class="form-lable">Phone</label>
+            <input id="phoneInput" type="text" class="form-control" name="phone">
+        </div>
+        <div class="mb-3">
+            <label for="numSeatsInput" class="form-lable">Number of Seats</label>
+            <input id="numSeatsInput" type="text" class="form-control" name="numSeats">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+</body>
+</html>
